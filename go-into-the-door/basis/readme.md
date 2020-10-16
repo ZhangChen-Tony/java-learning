@@ -1,1 +1,0 @@
-java的各个变量种类和python差不多，就是str变成了char, 有long之类的（和c++基本一致）
