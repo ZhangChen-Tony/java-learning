@@ -36,16 +36,11 @@ public class SolveFunction{
 
     static double solveTheFunction(double a,double b,double c,double d,double e,double f){
         /**
-         * (-1/
-         * (difference2-difference)/0.000000001) --> 求导
-         * *difference --> 看正方向
-         * *0.0001--> 乘一个系数
-         * 总的来说，就是函数朝向上方，y大于零的时候这个数是负数；
-         * 函数朝向上方，y小于零的时候这个数是正数；
+         * 总的来说，就是函数朝向上方，y大于零的时候delta是负数
+         * 函数朝向上方，y小于零的时候这个数是正数
          * 函数朝向下方，y大于零的时候这个数是正数
          * 函数朝向下方，y小于零的时候这个数是正数
-         * 简化上述等式，结果为-0.00000000001*difference/(difference2-difference)
-         * 并且delta的绝对值随着x与本地最小值距离的减小而减小
+         * 并且delta的绝对值随着fx减小而减小
          */
         double x = 0;
         double difference = 10;
