@@ -51,8 +51,13 @@ public class SolveFunction{
         double difference = 10;
         while(difference > 0.0000001 || difference < -0.0000001){
             difference = calculateTheFunction(a, b, c, d, e, f, x);
-            double difference2 = calculateTheFunction(a, b, c, d, e, f, x+0.00000001);
-            double delta = (-0.00000000001*difference/(difference2-difference));
+            double slope = (5*a*pow(x,4)+b*4*pow(x,3)+3*c*pow(x,2)+2*d*x+e);
+            if (slope>0){
+                slope = -1;
+            }else{
+                slope = 1;
+            }
+            double delta = slope*difference*0.000001;
             x = x+delta;
         }
         return x;
