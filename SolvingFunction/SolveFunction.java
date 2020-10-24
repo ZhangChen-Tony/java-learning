@@ -60,7 +60,9 @@ public class SolveFunction{
             System.out.println("遇到本地最小值");
             x = x-(a+b+c+d+e+f)/2;
             x = solveTheFunction(a, b, c, d, e, f, x);
+            return "None!";
+        }else{
+            return x;
         }
-        return x;
     }
 }
